@@ -15,10 +15,10 @@ public class Circle
      * Default constructor that initializes an instance of Circle
      * to (0,0) with a radius of 1.0.
      */
-    public Circle()
+    public Circle(int i, int radius)
     {
         location = new Point();
-        radius = 1.0;
+        this.radius = 1.0;
     }
 
     /**
@@ -62,9 +62,9 @@ public class Circle
      *
      * @return The location of this circle.
      */
-    public Point getLocation()
-    {
-        return getLocation();
+    public Point getLocation() {
+
+        return new Point(location.getX(),location.getY());
     }
 
     // mutator methods
@@ -85,7 +85,8 @@ public class Circle
      */
     public void setLocation(Point location)
     {
-       this.location = location; // TODO: add your code here.
+       this.location.setX(location.getX());
+       this.location.setY(location.getY());
     }
 
     // other methods
@@ -97,6 +98,7 @@ public class Circle
      */
     public boolean contains(Point p)
     {
+        //blue.contains(a);
         double distance = location.distanceTo(p);
         if (distance <= radius)
             return true;

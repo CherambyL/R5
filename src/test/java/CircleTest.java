@@ -78,7 +78,8 @@ class CircleTest {
         String circleExpected = c.toString();
         p.setX(p.getX()+5);
         p.setY(p.getY()+5);
-        String circleActual = c.toString();String message = "Expected:\n"+expected+"\nActual:\n"+actual+"\nMake sure you return a copy of the object!";
+        String circleActual = c.toString();
+        String message = "Expected:\n"+expected+"\nActual:\n"+actual+"\nMake sure you return a copy of the object!";
         assertEquals(circleExpected,circleActual,message);
     }
 
